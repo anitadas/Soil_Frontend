@@ -19,14 +19,14 @@ This is the frontend of the **Soil Contaminant Guideline Manager App**, built us
 
 ## 📁 Project Structure
 
+```bash
 src/
-│
-├── components/         # Reusable React components (e.g., Form, Table)
-├── pages/              # Manage and Analyze views
-├── services/           # API interaction logic
-├── App.js              # Root component
-├── index.js            # Entry point
-└── styles/             # CSS styling
+├── components/       # Reusable React components (e.g., Form, Table)
+├── pages/            # Manage and Analyze views
+├── services/         # API interaction logic
+├── App.js            # Root component
+├── index.js          # Entry point
+└── styles/           # CSS styling
 
 ---
 
