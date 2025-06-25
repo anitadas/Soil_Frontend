@@ -18,10 +18,9 @@ import "./App.css";
 
 function App() {
   const Router = createBrowserRouter([
-    { path: "/", element: <h1>Home</h1> },
-    { path: "/contaminants", element: <ContaminantList /> },
-    { path: "/contaminants/new", element: <ContaminantForm /> },
-    { path: "/contaminants/edit/:id", element: <ContaminantEdit /> },
+    { path: "/", element: <ContaminantList /> },
+    { path: "/new", element: <ContaminantForm /> },
+    { path: "/edit/:id", element: <ContaminantEdit /> },
     { path: "/soil-types", element: <SoilTypeList /> },
     { path: "/soil-types/new", element: <SoilTypeForm /> },
     { path: "/soil-types/edit/:id", element: <SoilTypeEdit /> },

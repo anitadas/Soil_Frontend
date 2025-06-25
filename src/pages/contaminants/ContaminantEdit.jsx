@@ -25,7 +25,7 @@ const ContaminantEdit = () => {
         id,
         name,
       });
-      navigate("/contaminants");
+      navigate("/");
     } catch (err) {
       setError("Failed to update contaminant");
     }

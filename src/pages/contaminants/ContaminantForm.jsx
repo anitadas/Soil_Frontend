@@ -14,7 +14,7 @@ const ContaminantForm = () => {
     setLoading(true);
     try {
       await axios.post("http://localhost:5091/api/contaminants", { name });
-      navigate("/contaminants");
+      navigate("/");
     } catch (err) {
       setError("Failed to add contaminant");
     }

@@ -69,7 +69,7 @@ const ContaminantList = () => {
           <h2 style={{ margin: 0, color: "#2d3748", fontSize: 32 }}>
             Contaminants
           </h2>
-          <Link to="/contaminants/new">
+          <Link to="/new">
             <button
               style={{
                 background: "#3182ce",
@@ -175,7 +175,7 @@ const ContaminantList = () => {
                     padding: "14px 12px",
                     borderBottom: "1px solid #e2e8f0",
                   }}>
-                  <Link to={`/contaminants/edit/${c.id}`}>
+                  <Link to={`/edit/${c.id}`}>
                     <button
                       style={{
                         background: "#3182ce",

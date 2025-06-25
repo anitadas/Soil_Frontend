@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { to: "/contaminants", label: "Contaminants" },
+  { to: "/", label: "Contaminants" },
   { to: "/soil-types", label: "Soil Types" },
   { to: "/pathways", label: "Pathways" },
   { to: "/guideline-values", label: "Guideline Values" },
@@ -49,7 +49,15 @@ const Navbar = () => {
         </Link>
         <div style={{ display: "flex", gap: 18 }}>
           {navLinks.map((link) => {
-            const isActive = location.pathname.startsWith(link.to);
+            let isActive;
+            if (link.to === "/") {
+              isActive =
+                location.pathname === "/" ||
+                location.pathname.startsWith("/edit") ||
+                location.pathname.startsWith("/new");
+            } else {
+              isActive = location.pathname.startsWith(link.to);
+            }
             return (
               <Link
                 key={link.to}
