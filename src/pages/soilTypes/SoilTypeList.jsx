@@ -17,7 +17,7 @@ const SoilTypeList = () => {
   const fetchSoilTypes = () => {
     setLoading(true);
     axios
-      .get("http://localhost:5091/api/soiltypes")
+      .get("http://13.203.223.105/api/soiltypes")
       .then((res) => {
         setSoilTypes(res.data);
         setLoading(false);
@@ -33,7 +33,7 @@ const SoilTypeList = () => {
       return;
     setDeleting(id);
     try {
-      await axios.delete(`http://localhost:5091/api/soiltypes/${id}`);
+      await axios.delete(`http://13.203.223.105/api/soiltypes/${id}`);
       setSoilTypes((prev) => prev.filter((s) => s.id !== id));
     } catch {
       setError("Failed to delete soil type");

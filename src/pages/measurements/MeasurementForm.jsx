@@ -17,10 +17,10 @@ const MeasurementForm = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5091/api/contaminants")
+      .get("http://13.203.223.105/api/contaminants")
       .then((res) => setContaminants(res.data));
     axios
-      .get("http://localhost:5091/api/soiltypes")
+      .get("http://13.203.223.105/api/soiltypes")
       .then((res) => setSoilTypes(res.data));
   }, []);
 
@@ -33,7 +33,7 @@ const MeasurementForm = () => {
     setError("");
     setLoading(true);
     try {
-      await axios.post("http://localhost:5091/api/measurements", form);
+      await axios.post("http://13.203.223.105/api/measurements", form);
       navigate("/measurements");
     } catch {
       setError("Failed to add measurement");

@@ -11,7 +11,7 @@ const PathwayEdit = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5091/api/pathways/${id}`)
+      .get(`http://13.203.223.105/api/pathways/${id}`)
       .then((res) =>
         setForm({ name: res.data.name, description: res.data.description })
       )
@@ -27,7 +27,7 @@ const PathwayEdit = () => {
     setError("");
     setLoading(true);
     try {
-      await axios.put(`http://localhost:5091/api/pathways/${id}`, {
+      await axios.put(`http://13.203.223.105/api/pathways/${id}`, {
         id,
         ...form,
       });

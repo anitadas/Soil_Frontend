@@ -21,16 +21,16 @@ const GuidelineValueEdit = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5091/api/contaminants")
+      .get("http://13.203.223.105/api/contaminants")
       .then((res) => setContaminants(res.data));
     axios
-      .get("http://localhost:5091/api/soiltypes")
+      .get("http://13.203.223.105/api/soiltypes")
       .then((res) => setSoilTypes(res.data));
     axios
-      .get("http://localhost:5091/api/pathways")
+      .get("http://13.203.223.105/api/pathways")
       .then((res) => setPathways(res.data));
     axios
-      .get(`http://localhost:5091/api/guidelinevalues/${id}`)
+      .get(`http://13.203.223.105/api/guidelinevalues/${id}`)
       .then((res) => {
         setForm({
           contaminantId: res.data.contaminantId,
@@ -61,7 +61,7 @@ const GuidelineValueEdit = () => {
 
     try {
       await axios.put(
-        `http://localhost:5091/api/guidelinevalues/${id}`,
+        `http://13.203.223.105/api/guidelinevalues/${id}`,
         payload
       );
       toast.success("Guideline value updated successfully");

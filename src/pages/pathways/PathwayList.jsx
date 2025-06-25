@@ -17,7 +17,7 @@ const PathwayList = () => {
   const fetchPathways = () => {
     setLoading(true);
     axios
-      .get("http://localhost:5091/api/pathways")
+      .get("http://13.203.223.105/api/pathways")
       .then((res) => {
         setPathways(res.data);
         setLoading(false);
@@ -33,7 +33,7 @@ const PathwayList = () => {
       return;
     setDeleting(id);
     try {
-      await axios.delete(`http://localhost:5091/api/pathways/${id}`);
+      await axios.delete(`http://13.203.223.105/api/pathways/${id}`);
       setPathways((prev) => prev.filter((p) => p.id !== id));
     } catch {
       setError("Failed to delete pathway");

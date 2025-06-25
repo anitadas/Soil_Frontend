@@ -13,7 +13,7 @@ const SoilTypeForm = () => {
     setError("");
     setLoading(true);
     try {
-      await axios.post("http://localhost:5091/api/soiltypes", { name });
+      await axios.post("http://13.203.223.105/api/soiltypes", { name });
       navigate("/soil-types");
     } catch {
       setError("Failed to add soil type");

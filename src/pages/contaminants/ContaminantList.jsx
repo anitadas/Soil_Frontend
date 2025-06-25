@@ -17,7 +17,7 @@ const ContaminantList = () => {
   const fetchContaminants = () => {
     setLoading(true);
     axios
-      .get("http://localhost:5091/api/contaminants")
+      .get("http://13.203.223.105/api/contaminants")
       .then((res) => {
         setContaminants(res.data);
         console.log(res.data, 23423423423);
@@ -35,7 +35,7 @@ const ContaminantList = () => {
       return;
     setDeleting(id);
     try {
-      await axios.delete(`http://localhost:5091/api/contaminants/${id}`);
+      await axios.delete(`http://13.203.223.105/api/contaminants/${id}`);
       setContaminants((prev) => prev.filter((c) => c.id !== id));
     } catch {
       setError("Failed to delete contaminant");

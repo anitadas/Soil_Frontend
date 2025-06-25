@@ -17,7 +17,7 @@ const GuidelineValueList = () => {
   const fetchGuidelines = () => {
     setLoading(true);
     axios
-      .get("http://localhost:5091/api/guidelinevalues")
+      .get("http://13.203.223.105/api/guidelinevalues")
       .then((res) => {
         setGuidelines(res.data);
         setLoading(false);
@@ -36,7 +36,7 @@ const GuidelineValueList = () => {
       return;
     setDeleting(id);
     try {
-      await axios.delete(`http://localhost:5091/api/guidelinevalues/${id}`);
+      await axios.delete(`http://13.203.223.105/api/guidelinevalues/${id}`);
       setGuidelines((prev) => prev.filter((g) => g.id !== id));
     } catch {
       setError("Failed to delete guideline value");

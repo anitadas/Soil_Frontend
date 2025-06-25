@@ -11,7 +11,7 @@ const SoilTypeEdit = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5091/api/soiltypes/${id}`)
+      .get(`http://13.203.223.105/api/soiltypes/${id}`)
       .then((res) => setName(res.data.name))
       .catch(() => setError("Failed to fetch soil type"));
   }, [id]);
@@ -21,7 +21,7 @@ const SoilTypeEdit = () => {
     setError("");
     setLoading(true);
     try {
-      await axios.put(`http://localhost:5091/api/soiltypes/${id}`, {
+      await axios.put(`http://13.203.223.105/api/soiltypes/${id}`, {
         id,
         name,
       });

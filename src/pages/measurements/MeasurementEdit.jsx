@@ -17,13 +17,13 @@ const MeasurementEdit = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5091/api/contaminants")
+      .get("http://13.203.223.105/api/contaminants")
       .then((res) => setContaminants(res.data));
     axios
-      .get("http://localhost:5091/api/soiltypes")
+      .get("http://13.203.223.105/api/soiltypes")
       .then((res) => setSoilTypes(res.data));
     axios
-      .get(`http://localhost:5091/api/measurements/${id}`)
+      .get(`http://13.203.223.105/api/measurements/${id}`)
       .then((res) => {
         setForm({
           contaminantId: res.data.contaminantId,
@@ -43,7 +43,7 @@ const MeasurementEdit = () => {
     setError("");
     setLoading(true);
     try {
-      await axios.put(`http://localhost:5091/api/measurements/${id}`, {
+      await axios.put(`http://13.203.223.105/api/measurements/${id}`, {
         id,
         ...form,
       });

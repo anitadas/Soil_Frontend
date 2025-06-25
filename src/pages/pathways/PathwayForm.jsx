@@ -17,7 +17,7 @@ const PathwayForm = () => {
     setError("");
     setLoading(true);
     try {
-      await axios.post("http://localhost:5091/api/pathways", form);
+      await axios.post("http://13.203.223.105/api/pathways", form);
       navigate("/pathways");
     } catch {
       setError("Failed to add pathway");

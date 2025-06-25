@@ -11,7 +11,7 @@ const ContaminantEdit = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5091/api/contaminants/${id}`)
+      .get(`http://13.203.223.105/api/contaminants/${id}`)
       .then((res) => setName(res.data.name))
       .catch(() => setError("Failed to fetch contaminant"));
   }, [id]);
@@ -21,7 +21,7 @@ const ContaminantEdit = () => {
     setError("");
     setLoading(true);
     try {
-      await axios.put(`http://localhost:5091/api/contaminants/${id}`, {
+      await axios.put(`http://13.203.223.105/api/contaminants/${id}`, {
         id,
         name,
       });

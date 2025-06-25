@@ -19,13 +19,13 @@ const GuidelineValueForm = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5091/api/contaminants")
+      .get("http://13.203.223.105/api/contaminants")
       .then((res) => setContaminants(res.data));
     axios
-      .get("http://localhost:5091/api/soiltypes")
+      .get("http://13.203.223.105/api/soiltypes")
       .then((res) => setSoilTypes(res.data));
     axios
-      .get("http://localhost:5091/api/pathways")
+      .get("http://13.203.223.105/api/pathways")
       .then((res) => setPathways(res.data));
   }, []);
 
@@ -45,7 +45,7 @@ const GuidelineValueForm = () => {
     };
 
     try {
-      await axios.post("http://localhost:5091/api/guidelinevalues", payload);
+      await axios.post("http://13.203.223.105/api/guidelinevalues", payload);
       toast.success("Guideline value added successfully");
       setTimeout(() => navigate("/guideline-values"), 1500);
     } catch (err) {
